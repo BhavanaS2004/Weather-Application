@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Custom styles for the weather app -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Animation styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"> <!-- Google Font -->
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="weather-card">
+            <header class="app-header">
+                <h1 class="app-title">Weather Application</h1>
+                <h3 class="app-subtitle">Get the latest weather update</h3>
+            </header>
+            <main class="weather-input-section">
+                <label for="city-input" class="city-input-label">Enter city name:</label>
+                <input type="text" id="city-input" class="city-input" placeholder="e.g., Chennai" aria-label="City name input">
+                <button type="button" id="fetch-weather-btn" class="fetch-button" onclick="fetchWeatherData($('#city-input').val())">
+                    View Weather
+                </button>
+            </main>
+            <section id="weather-info" class="weather-info animate__animated animate__fadeIn">
+                <h3 id="city-name" class="city-name"></h3>
+                <p id="date" class="weather-date"></p>
+                <p id="temperature" class="weather-temperature"></p>
+                <p id="description" class="weather-description"></p>
+                <p id="wind-speed" class="weather-wind-speed"></p>
+            </section>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for DOM manipulation -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script> <!-- Moment.js for date handling -->
+    <script src="script.js"></script> <!-- JavaScript file -->
+</body>
+
+</html>
